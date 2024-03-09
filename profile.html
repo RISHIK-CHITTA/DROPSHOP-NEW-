@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<style>
+			h1{
+				color:#3A6979 ;
+			}
+			#table{
+				border-radius: 25px;
+				color: #3A6979;
+			}
+		</style>
+		<script type="text/javascript">
+			function submit(){
+				alert("Your response is submitted");
+			}
+			function callme(){
+				alert("Hii");
+				var pass=document.getElementById("P").value;
+				var repass=document.getElementById("R").value;
+				document.write(pass);
+				var pass_re=new RegExp("{8,}");
+				if(pass=="" || repass=""){
+					alert("enter password");
+				}
+				if(pass.match(pass_re)){
+					if(pass==repass){
+						alert("Password is rested");
+					}
+					else{
+						alert("Enter same password and Re-enter password");
+					}
+				}
+				else{
+					alert("Password requires minimum 8 character");
+				}
+			}
+		</script>
+		<br>
+		<h1 align="center">PROFILE</h1>
+	</head>
+	<body>
+		<table border="0" id="table" align="center" cellpadding="10">
+			<tr>
+				<td colspan="3"><img src="profilephoto.png" height="300x" width="350px"></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>:</td>
+				<td><input id="name" type="text"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>:</td>
+				<td>Male:<input type="radio" name="gender" value="Male">Female:<input type="radio" name="gender"  value="Female"></td>
+			</tr>
+			<tr>
+				<td>Phone number</td>
+				<td>:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>E-Mail</td>
+				<td>:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td>:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" name=Submit value="Submit" onclick="return submit()"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><h1>Change Password</h1></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td><input id="P" type="Password"></td>
+			</tr>
+			<tr>
+				<td>Re-Enter Password</td>
+				<td>:</td>
+				<td><input id="R" type="Password"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" value="Reset" onclick="return callme()"></td>
+				<td></td>
+			</tr>
+
+
+		</table>
+	</body>
+
+
+</html>

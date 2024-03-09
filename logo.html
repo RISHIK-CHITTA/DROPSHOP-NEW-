@@ -1,0 +1,36 @@
+<html>
+	<head> 
+		<title>LOGO</title> 
+		<style>
+			#help10{
+				height: 35px;
+				width:  60px;
+				margin: 28px 0px;
+				background-color: #3A6979;
+				text-align: center;
+				text-decoration-color: whitesmoke;
+				color:white ;
+			}
+			#help10:hover {
+  				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+		</style>
+		<script>
+			function help(){
+				var ph_number=prompt("Enter your Phone number","(phone number)");
+				var ph_num_check=new RegExp("[0-9]{10}");
+				if (ph_number.match(ph_num_check)){
+					alert("We will connect you soon to this number :"+ph_number);
+				}
+				else{
+					alert("enter a valid number");
+					return help();
+				}
+			}
+		</script>
+	</head>
+	<body bgcolor=#D0DFDA>
+		<img src="logopic.jpg" alt="DROPSHOP" width= 95% height=100% title="DROPSHOP">
+		<input id="help10" onclick="return help()" type="button" name="Help/Support" width="15" height="15" value="Support">
+	</body>
+</html>

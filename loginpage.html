@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<style>
+			*{
+				color:#3A6979;
+
+			}
+			#buttons1,#buttons2{
+				background:#3A6979 ;
+				color:white ;
+			}
+			#table{
+				border-radius: 25px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function forpass() {
+				alert("User name : PVPSIT Password : DROPSHOP");
+			}
+			function login(){
+				var username=document.getElementById("username").value;
+				var password=document.getElementById("password").value;
+				if(username=="PVPSIT"){
+					if(password=="DROPSHOP"){
+						window.location.href = "main.html";
+					}
+					else{
+						alert("Enter valid password");
+						document.getElementById("password").focus();
+					}
+				}
+				else{
+					alert("Enter valid username");
+					document.getElementById("username").focus();
+				}
+
+			}
+		</script>
+	</head>
+	<body bgcolor="#D0DFDA">
+		<br><br><br>
+		<table border="0" bgcolor="#FFFFFF" align="center" cellpadding="0" cellspacing="10" id="table">
+			<tr>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<th colspan="3" >LOGIN PAGE</th>
+			</tr>
+			<tr>
+				<td>USERNAME</td>
+				<td>:</td>
+				<td><input id="username" type="text"></td>
+			</tr>
+			<tr>
+				<td>PASSWORD</td>
+				<td>:</td>
+				<td><input id="password" type="password"></td>
+			</tr>
+			<tr>
+				<td><input id="buttons1"type="button" onclick="return forpass()" value="Forgot Password"></td>
+				<td></td>
+				<td align="center"><input id="buttons2" type="button" value="Login" onclick="return login()"></td>
+			</tr>
+			<tr>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td colspan="3"></td>
+			</tr>
+			
+		</table>
+	</body>
+</html>
